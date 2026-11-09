@@ -8,7 +8,7 @@ export interface FieldSpec {
   slider?: { min: number; max: number; step: number };
 }
 
-export const SANDERS_HELP = 'Skeletal maturity at the start of bracing. Stages 4–6 are treated as one group.';
+export const SANDERS_HELP = 'Skeletal maturity at the start of bracing.';
 
 export const COBB_FIELD: FieldSpec = {
   key: 'baselineCobbDegrees',

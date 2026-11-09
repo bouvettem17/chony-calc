@@ -211,18 +211,14 @@ main { max-width: 1200px; margin: -84px auto 0; padding: 0 32px 72px; }
 .about__intro { max-width: 760px; }
 .about h2 { margin: 0; font-size: 1.75rem; font-weight: 750; color: var(--navy-900); }
 .about__intro p { margin: 12px 0 0; color: var(--ink-2); font-size: 1.02rem; }
-.about__grid { display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 28px; margin-top: 28px; align-items: start; }
 .facts {
-  margin: 0; padding: 8px 24px; background: var(--white); border-radius: var(--r-lg); box-shadow: var(--shadow);
+  display: grid; grid-template-columns: repeat(3, 1fr); margin: 28px 0 0; padding: 8px;
+  background: var(--white); border-radius: var(--r-lg); box-shadow: var(--shadow);
 }
-.facts div { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; }
-.facts div + div { border-top: 1px solid var(--line); }
+.facts div { display: flex; flex-direction: column-reverse; gap: 4px; padding: 18px 24px; }
+.facts div + div { border-left: 1px solid var(--line); }
 .facts dt { color: var(--ink-2); font-size: 0.93rem; }
-.facts dd { margin: 0; font-weight: 750; font-size: 1.15rem; color: var(--navy-900); }
-.caveats { padding: 24px 28px; background: var(--cu-blue-50); border-radius: var(--r-lg); }
-.caveats h3 { margin: 0 0 8px; font-size: 1.05rem; color: var(--navy); }
-.caveats ul { margin: 0; padding-left: 20px; color: var(--ink-2); font-size: 0.95rem; }
-.caveats li { margin-top: 8px; max-width: 70ch; }
+.facts dd { margin: 0; font-weight: 780; font-size: 2rem; letter-spacing: -0.02em; color: var(--navy-900); line-height: 1.1; }
 
 /* ---------- footer ---------- */
 .site-footer { background: var(--navy-900); color: #c9dbea; }
@@ -261,7 +257,6 @@ main { max-width: 1200px; margin: -84px auto 0; padding: 0 32px 72px; }
 @media (max-width: 1000px) {
   .card { grid-template-columns: 1fr; }
   .result { border-left: 0; border-top: 1px solid var(--cu-blue-100); }
-  .about__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
@@ -277,6 +272,8 @@ main { max-width: 1200px; margin: -84px auto 0; padding: 0 32px 72px; }
   .segmented--mode { display: flex; }
   .segmented--mode button { flex: 1; padding: 8px 10px; font-size: 0.84rem; }
   .result { padding: 28px 20px; }
+  .facts { grid-template-columns: 1fr; }
+  .facts div + div { border-left: 0; border-top: 1px solid var(--line); }
   .site-footer__inner { padding: 24px 20px 100px; flex-direction: column; align-items: flex-start; gap: 12px; }
   .mobile-bar {
     display: flex; align-items: center; gap: 10px;
