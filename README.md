@@ -35,3 +35,8 @@ npm run lint
 ## Disclosure
 
 `src/components/Disclosure.tsx` gates the calculator behind a disclosure on every page load (no storage, so nothing about the visitor is remembered). The wording is a **draft**. Have your institution's legal/compliance office review it before launch.
+
+## Deploy (GitHub Pages)
+
+`.github/workflows/deploy.yml` runs on every push to `main`: install → `npm test` → build → publish `dist/`.
+If the engine tests fail, nothing is deployed. One-time setup: repo **Settings → Pages → Source: GitHub Actions**.
